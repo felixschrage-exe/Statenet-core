@@ -2,11 +2,11 @@ package content.nation;
 
 import java.util.Map;
 import java.util.HashMap;
-
 import java.util.Set;
 import java.util.HashSet;
-
 import java.time.LocalDate;
+
+import content.things.*;
 
 public class Nation {
 
@@ -70,6 +70,7 @@ public class Nation {
 	private boolean isRepublic;
 	private boolean isFederation;
 	private Set<String> parties;
+	private PoliticalView politicalView;
 
 	// international politics
 	private Set<String> neighbouringNations;
