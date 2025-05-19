@@ -1,6 +1,6 @@
 package content.things;
 
-public enum Age {
+public enum AgeGroup {
 
 	_0_4,
 	_5_9,
@@ -14,5 +14,5 @@ public enum Age {
 	_65_74,
 	_75_84,
 	_85PLUS
-	
+
 }

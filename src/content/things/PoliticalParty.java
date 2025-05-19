@@ -10,10 +10,10 @@ public class PoliticalParty {
 	private String description;
 	private LocalDate foundingDate;
 
-	private Person leader;
-	private Person leadCandidate;
-	private HashMap<Person, Float> members; // Every member has a rating how happy the party is with them  
-	
+	private Politician leader;
+	private Politician leadCandidate;
+	private HashMap<Politician, Float> members; // Every member has a rating how happy the party is with them
+
 	private PoliticalView politicalView;
-	
+
 }
