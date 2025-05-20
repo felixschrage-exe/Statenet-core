@@ -10,32 +10,47 @@ public class PointOfInterest {
     
     private String name;
     private String description;
-    private LocalDate dateOfCompletion;
+    private final LocalDate dateOfCompletion;
+    private final District cityDistrict;
 
-    private City city;
-    private String cityDistrict;
-    private State state;
-    private Nation nation;
-
-    public PointOfInterest(String name, String description, LocalDate dateOfCompletion, City city) {
+    public PointOfInterest(String name, String description, LocalDate dateOfCompletion, District cityDistrict) {
         this.name = name;
         this.description = description;
         this.dateOfCompletion = dateOfCompletion;
-        this.city = city;
-        this.state = city.getState();
-        this.nation = city.getNation();
+        this.cityDistrict = cityDistrict;
         all.add(this);
     }
 
-    public PointOfInterest(String name, LocalDate dateOfCompletion, City city) {
+    public PointOfInterest(String name, LocalDate dateOfCompletion, District cityDistrict) {
         this.name = name;
         this.description = "No description";
         this.dateOfCompletion = dateOfCompletion;
-        this.city = city;
-        this.state = city.getState();
-        this.nation = city.getNation();
+        this.cityDistrict = cityDistrict;
         all.add(this);
-        
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    public LocalDate getDateOfCompletion() {
+        return this.dateOfCompletion;
+    }
+
+    public District getDistrict() {
+        return this.cityDistrict;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 }

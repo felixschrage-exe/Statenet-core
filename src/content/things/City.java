@@ -13,9 +13,8 @@ public class City {
     private String description;
     private LocalDate foundationDate;
     private long population;
-    private String[] districts;
+    private District[] districts;
     private PostCode postcode;
-    private Nation nation;
     private State state;
     private float area;
     private CityType type;
@@ -40,7 +39,7 @@ public class City {
         String description,
         LocalDate foundationDate,
         long population,
-        String[] districts,
+        District[] districts,
         PostCode postcode,
         State state,
         float area,
@@ -62,7 +61,6 @@ public class City {
         this.population = population;
         this.districts = districts;
         this.postcode = postcode;
-        this.nation = state.getNation();
         this.state = state;
         this.area = area;
         this.type = cityType;
@@ -83,7 +81,7 @@ public class City {
         String name,
         LocalDate foundationDate,
         long population,
-        String[] districts,
+        District[] districts,
         PostCode postcode,
         State state,
         float area,
@@ -101,7 +99,6 @@ public class City {
         this.districts = districts;
         this.postcode = postcode;
         this.state = state;
-        this.nation = state.getNation();
         this.area = area;
         this.type = cityType;
         this.role = cityRole;
@@ -133,7 +130,7 @@ public class City {
         return this.population;
     }
 
-    public String[] getDistricts() {
+    public District[] getDistricts() {
         return this.districts;
     }
 
@@ -146,7 +143,7 @@ public class City {
     }
 
     public Nation getNation() {
-        return this.nation;
+        return this.state.getNation();
     }
 
     public float getArea() {
@@ -229,7 +226,7 @@ public class City {
         else this.type = CityType.MEGACIY;
     }
 
-    public void setDistricts(String[] districts) {
+    public void setDistricts(District[] districts) {
         this.districts = districts;
     }
 
@@ -239,7 +236,6 @@ public class City {
 
     public void setState(State state) {
         this.state = state;
-        this.nation = state.getNation();
     }
 
     public void setArea(float area) {
