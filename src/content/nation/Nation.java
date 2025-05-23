@@ -10,19 +10,19 @@ import content.things.*;
 
 public class Nation {
 
-	public static final HashSet<String, Nation> REGISTER = new HashSet<String, Nation>();
+	public static final HashMap<String, Nation> REGISTER = new HashMap<String, Nation>();
 	
 	// general nation info
 	private String presentationName;
 	private String officialName;
 	private String description;
-	private Date foundingDate;
+	private LocalDate foundingDate;
 	private String stateId;
 	private Map<LocalDate, String[]> nationwideHolidays;
 	private Continent continent;
 	private Flag flag;
 	private float sizeSqKm;
-	private TimeZone timeZone;
+	// private TimeZone timeZone;
 
 	// language
 	private Set<Language> officialLanguages;
@@ -65,8 +65,8 @@ public class Nation {
 	private boolean hasChancellor;
 	private String presidentName;
 	private String chancellorName;
-	private Role roleOfChancellor;
-	private Role roleOfPresident;
+	//private Role roleOfChancellor;
+	//private Role roleOfPresident;
 	private boolean isRepublic;
 	private boolean isFederation;
 	private Set<String> parties;
